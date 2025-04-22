@@ -27,9 +27,7 @@ public class Test_trailx {
     location.sendKeys(Keys.ARROW_DOWN);
     location.sendKeys(Keys.ENTER);
     Thread.sleep(2000);
-    
     location.submit();
-   
     List<WebElement> searchResults = driver.findElements(By.cssSelector("div.aos-init.aos-animate"));
 
  System.out.println("Search Results:");
@@ -37,10 +35,10 @@ public class Test_trailx {
      System.out.println(result.getText());
  }
 
-    Thread.sleep(3000);
+    Thread.sleep(5000);
     driver.navigate().back();
     
-    Thread.sleep(3000);
+    Thread.sleep(5000);
     // Negative test scenarios by entering incorrect location
     WebElement n_search = driver.findElement(By.id("search-medical-conditions"));
     n_search.click(); 
@@ -55,7 +53,10 @@ public class Test_trailx {
     WebElement n_location = driver.findElement(By.name("place"));
     n_location.sendKeys("5264");
     Thread.sleep(2000);
+    
     n_location.submit();
+  
+   
     
 
 }
